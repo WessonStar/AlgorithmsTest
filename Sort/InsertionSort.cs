@@ -15,9 +15,12 @@ namespace AlgorithmsTest.Sort
             int size = source.Length;
             for (int i = 1; i < size; i++)
             {
-                for (int j = i; Less(source[j], source[j-1]) && j > 0; j--)
+                for (int j = i; j > 0; j--)
                 {
-                    Exchange(source, i - 1, i);
+                    if (Less(source[j], source[j - 1]))
+                    {
+                        Exchange(source, j - 1, j);
+                    }
                 }
             }
         }
