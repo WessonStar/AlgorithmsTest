@@ -13,7 +13,8 @@ namespace AlgorithmsTest
             //ISort<int> sorter = new SelectionSort<int>();
             //ISort<int> sorter = new InsertionSort<int>();
             //ISort<int> sorter = new BubbleSort<int>();
-            ISort<int> sorter = new QuickSort<int>();
+            //ISort<int> sorter = new QuickSort<int>();
+            ISort<int> sorter = new MergeSort<int>();
             sorter.Sort(source);
             Console.WriteLine(String.Join(",", source));
         }
