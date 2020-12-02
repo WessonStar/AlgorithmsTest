@@ -7,7 +7,7 @@ namespace AlgorithmsTest.Sort
     /// <summary>
     /// 冒泡排序，不断比较相邻的值，通过交换将最大值挪到右侧
     /// </summary>
-    class BubbleSort<T> : SortBase<T>, ISort<T>
+    class BubbleSort<T> : SortBase<T>, ISorter<T>
         where T : IComparable<T>
     {
         public void Sort(T[] source)
@@ -21,7 +21,7 @@ namespace AlgorithmsTest.Sort
                 {
                     if (Less(source[j], source[j-1]))
                     {
-                        Exchange(source, j - 1, j);
+                        Swap(source, j - 1, j);
                         swapped = true;
                     }
                 }

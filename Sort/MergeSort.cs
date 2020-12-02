@@ -8,7 +8,7 @@ namespace AlgorithmsTest.Sort
     /// 归并排序，需要额外的空间
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    class MergeSort<T> : SortBase<T>, ISort<T>
+    class MergeSort<T> : SortBase<T>, ISorter<T>
         where T : IComparable<T>
     {
         public void Sort(T[] source)

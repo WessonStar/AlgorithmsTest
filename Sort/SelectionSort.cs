@@ -7,7 +7,7 @@ namespace AlgorithmsTest.Sort
     /// <summary>
     /// 选择排序，每次循环找出最小的值，然后与当前值做交换
     /// </summary>
-    class SelectionSort<T> : SortBase<T>, ISort<T> 
+    class SelectionSort<T> : SortBase<T>, ISorter<T> 
         where T : IComparable<T>
     {
         public void Sort(T[] source)
@@ -27,7 +27,7 @@ namespace AlgorithmsTest.Sort
                 
                 if (min != i)
                 {
-                    Exchange(source, i, min);
+                    Swap(source, i, min);
                 }
             }
         }

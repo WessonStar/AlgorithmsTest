@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AlgorithmsTest
 {
-    interface ISort<T> where T : IComparable<T>
+    interface ISorter<T> where T : IComparable<T>
     {
         void Sort(T[] source);
     }

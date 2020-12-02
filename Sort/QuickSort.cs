@@ -7,7 +7,7 @@ namespace AlgorithmsTest.Sort
     /// <summary>
     /// 快速排序，定基准+拆分+递归
     /// </summary>
-    class QuickSort<T> : SortBase<T>, ISort<T>
+    class QuickSort<T> : SortBase<T>, ISorter<T>
         where T : IComparable<T>
     {
         public void Sort(T[] source)
@@ -46,9 +46,9 @@ namespace AlgorithmsTest.Sort
                     break;
                 }
 
-                Exchange(source, j, i);
+                Swap(source, j, i);
             }
-            Exchange(source, j, lo);
+            Swap(source, j, lo);
 
             Sort(source, lo, j - 1);
             Sort(source, j + 1, hi);

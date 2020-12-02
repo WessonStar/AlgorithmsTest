@@ -7,7 +7,7 @@ namespace AlgorithmsTest.Sort
     /// <summary>
     /// 插入排序，在已排序集合中寻找插入位置
     /// </summary>
-    class InsertionSort<T> : SortBase<T>, ISort<T>
+    class InsertionSort<T> : SortBase<T>, ISorter<T>
         where T : IComparable<T>
     {
         public void Sort(T[] source)
@@ -19,7 +19,7 @@ namespace AlgorithmsTest.Sort
                 {
                     if (Less(source[j], source[j - 1]))
                     {
-                        Exchange(source, j - 1, j);
+                        Swap(source, j - 1, j);
                     }
                 }
             }
